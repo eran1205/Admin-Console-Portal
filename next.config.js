@@ -1,11 +1,23 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   swcMinify: true,
-// }
-const withImages = require('next-images');
+// const withImages = require('next-images');
 
-const redirects = {
+// const redirects = {
+//   async redirects() {
+//     return [
+//       {
+//         source: '/',
+//         destination: '/dashboard',
+//         permanent: true
+//       }
+//     ];
+//   }
+// };
+
+
+// module.exports =  withImages(redirects);
+
+module.exports = {
+  basePath: '/Admin-Console-Portal',
+  assetPrefix: '/Admin-Console-Portal',
   async redirects() {
     return [
       {
@@ -14,10 +26,5 @@ const redirects = {
         permanent: true
       }
     ];
-  }
+  },
 };
-
-
-module.exports =  withImages(redirects);
-
-// module.exports = nextConfig;
